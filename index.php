@@ -40,7 +40,8 @@ if (isset($_SESSION['user_id'])) {
     <?php else: ?>
         <h1>Inicia sesion o registrate</h1>
         <a href="login.php">Inicia Sesion</a> or 
-        <a href="singup.php">Registrate</a>
+        <a href="singup.php">Registrate</a> <br><br>
+        <a href="productos.php">productos</a> 
     <?php endif; ?>
 </body>
 </html>
