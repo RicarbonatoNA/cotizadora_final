@@ -1,5 +1,6 @@
 <?php
-$server = 'localhost';
+
+ $server = 'localhost';
 $username = 'root';
 $password = '';
 $database = 'cotizadora_2';
@@ -9,4 +10,13 @@ try{
 } catch (PDOException $e){
     die('Conexion fallida: '.$e->getMessage());
 }
+
+
+
+$conn = mysqli_connect(
+  'localhost',
+  'root',
+  '',
+  'cotizadora_2'
+) or die(mysql_error($mysql));
 ?>

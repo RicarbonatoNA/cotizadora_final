@@ -18,7 +18,7 @@
 
       <!-- ADD TASK FORM -->
       <div class="card card-body">
-        <form action="save_task.php" method="POST">
+        <form action="save_client.php" method="POST">
           <div class="form-group">
             <input type="text" name="name" class="form-control" placeholder="name" autofocus>
           </div>

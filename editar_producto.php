@@ -20,10 +20,10 @@ if  (isset($_GET['id'])) {
     $row = mysqli_fetch_array($result);
     $name = $row['name'];
     $sku = $row['sku'];
-    $description = $row['description'];
+    $description = $row['descripcion'];
     $precio_compra = $row['precio_compra'];
     $precio_venta = $row['precio_venta'];
-    $divisa = $row['description'];
+    $divisa = $row['divisa'];
     $impuesto = $row['impuesto'];
     $unidad = $row['unidad'];
     $imagen = $row['imagen'];
@@ -59,16 +59,14 @@ if (isset($_POST['update'])) {
   <div class="row">
     <div class="col-md-4 mx-auto">
       <div class="card card-body">
-      <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
+      <form action="editar_producto.php?id=<?php echo $_GET['id']; ?>" method="POST">
         <div class="form-group">
           <input name="name" type="text" class="form-control" value="<?php echo $name; ?>" placeholder="Update name">
         </div>
         <div class="form-group">
           <input name="sku" type="text" class="form-control" value="<?php echo $sku; ?>" placeholder="Update sku">
         </div>
-        <div class="form-group">
-          <input name="description" type="text" class="form-control" value="<?php echo $description; ?>" placeholder="Update description">
-        </div>
+        
         <div class="form-group">
           <input name="precio_compra" type="text" class="form-control" value="<?php echo $precio_compra; ?>" placeholder="Update precio_compra">
         </div>

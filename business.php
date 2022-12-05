@@ -18,35 +18,26 @@
 
       <!-- ADD TASK FORM -->
       <div class="card card-body">
-        <form action="save_producto.php" method="POST">
+        <form action="save_business.php" method="POST">
           <div class="form-group">
             <input type="text" name="name" class="form-control" placeholder="name" autofocus>
           </div>
           <div class="form-group">
-            <input type="text" name="sku" class="form-control" placeholder="sku" autofocus>
+            <input type="text" name="identificador_fiscal" class="form-control" placeholder="identificador_fiscal" autofocus>
           </div>
           <div class="form-group">
-            <input type="text" name="precio_compra" class="form-control" placeholder="precio_compra" autofocus>
+            <input type="text" name="direccion_facturacion" class="form-control" placeholder="direccion_facturacion" autofocus>
           </div>
           <div class="form-group">
-            <input type="text" name="precio_venta" class="form-control" placeholder="precio_venta" autofocus>
+            <input type="text" name="telefono" class="form-control" placeholder="telefono" autofocus>
           </div>
           <div class="form-group">
-            <input type="text" name="divisa" class="form-control" placeholder="divisa" autofocus>
-          </div>
-          <div class="form-group">
-            <input type="text" name="impuesto" class="form-control" placeholder="impuesto" autofocus>
-          </div>
-          <div class="form-group">
-            <input type="text" name="unidad" class="form-control" placeholder="unidad" autofocus>
-          </div>
-          <div class="form-group">
-            <input type="text" name="imagen" class="form-control" placeholder="imagen" autofocus>
+            <input type="text" name="logo" class="form-control" placeholder="logo" autofocus>
           </div>
           <div class="form-group">
             <input type="text" name="notas" class="form-control" placeholder="notas" autofocus>
           </div>
-          <input type="submit" name="save_products" class="btn btn-success btn-block" value="picame con cuiadado soy una dama  ">
+          <input type="submit" name="save_business" class="btn btn-success btn-block" value="picame con cuiadado soy una dama x2 ">
         </form>
       </div>
     </div>
@@ -55,39 +46,32 @@
         <thead>
           <tr>
             <th>name</th>
-            <th>sku</th>
-            <th>precio_compra</th>
-            <th>precio_venta</th>
-            <th>divisa</th>
-            <th>impuesto</th>
-            <th>unidad</th>
-            <th>imagen</th>
+            <th>identificador_fiscal</th>
+            <th>direccion_facturacion</th>
+            <th>telefono</th>
+            <th>logo</th>
             <th>notas</th>
-
           </tr>
         </thead>
         <tbody>
 
           <?php
-          $query = "SELECT * FROM products";
+          $query = "SELECT * FROM business ";
           $result_tasks = mysqli_query($conn, $query);    
 
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <tr>
             <td><?php echo $row['name']; ?></td>
-            <td><?php echo $row['sku']; ?></td>
-            <td><?php echo $row['precio_compra']; ?></td>
-            <td><?php echo $row['precio_venta']; ?></td>
-            <td><?php echo $row['divisa']; ?></td>
-            <td><?php echo $row['impuesto']; ?></td>
-            <td><?php echo $row['unidad']; ?></td>
-            <td><?php echo $row['imagen']; ?></td>
+            <td><?php echo $row['identificador_fiscal']; ?></td>
+            <td><?php echo $row['direccion_facturacion']; ?></td>
+            <td><?php echo $row['telefono']; ?></td>
+            <td><?php echo $row['logo']; ?></td>
             <td><?php echo $row['notas']; ?></td>
             <td>
-              <a href="editar_producto.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
+              <a href="editar_business.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
                 <i class="fas fa-marker"></i>
               </a>
-              <a href="delete_producto.php?id=<?php echo $row['id']?>" class="btn btn-danger">
+              <a href="delete_business.php?id=<?php echo $row['id']?>" class="btn btn-danger">
                 <i class="far fa-trash-alt"></i>
               </a>
             </td>

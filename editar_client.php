@@ -62,7 +62,7 @@ if (isset($_POST['update'])) {
   <div class="row">
     <div class="col-md-4 mx-auto">
       <div class="card card-body">
-      <form action="edit.php?id=<?php echo $_GET['id']; ?>" method="POST">
+      <form action="editar_client.php?id=<?php echo $_GET['id']; ?>" method="POST">
         <div class="form-group">
           <input name="name" type="text" class="form-control" value="<?php echo $name; ?>" placeholder="Update name">
         </div>

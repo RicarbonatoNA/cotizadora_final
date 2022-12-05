@@ -41,7 +41,9 @@ if (isset($_SESSION['user_id'])) {
         <h1>Inicia sesion o registrate</h1>
         <a href="login.php">Inicia Sesion</a> or 
         <a href="singup.php">Registrate</a> <br><br>
-        <a href="productos.php">productos</a> 
+        <a href="productos.php">productos</a> |
+        <a href="client.php">clientes</a> |
+        <a href="business.php">business</a> |
     <?php endif; ?>
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 include('database.php');
 
-if (isset($_POST['save_taks'])) {
+if (isset($_POST['save_client'])) {
   $name = $_POST['name'];
   $email= $_POST['email'];
   $identificador_fiscal = $_POST['identificador_fiscal'];
